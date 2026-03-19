@@ -4,6 +4,7 @@ import { View, Text, FlatList, Button } from "react-native";
 import styles from "../styles/styles.js";
 
 import { getPeople, deletePerson } from "../servers/peopleCrud.js";
+import CardPersonal from "../components/CardPersonal.js";
 
 export default function HomeScreen({ navigation }) {
     const [people, setPeople] = useState([]);
