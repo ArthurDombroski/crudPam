@@ -3,14 +3,14 @@ import { View, Text, FlatList, Button } from "react-native";
 
 import styles from "../styles/styles.js";
 
-import { getPeople, deletePerson } from "../servers/peopleCrud.js";
+import peopleCrud from "../servers/peopleCrud.js";
 import CardPersonal from "../components/CardPersonal.js";
 
 export default function HomeScreen({ navigation }) {
     const [people, setPeople] = useState([]);
 
     async function loadPeople() {
-        const data = await getPeople();
+        const data = await peopleCrud.getPeople();
 
         setPeople(data);
     }
@@ -22,7 +22,7 @@ export default function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
 
-            <Text style={style.title}>Pessoas</Text>
+            <Text style={styles.title}>Pessoas</Text>
 
             <Button title="Adicionar Pessoa"
                 onPress={() => navigation.navigate("AddEdit")} />
