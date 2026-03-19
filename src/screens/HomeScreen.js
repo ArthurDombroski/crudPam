@@ -25,7 +25,7 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.title}>Pessoas</Text>
 
             <Button title="Adicionar Pessoa"
-                onPress={() => navigation.navigate("AddEdit")} />
+                onPress={() => navigation.navigate("AddEditScreen")} />
 
             <FlatList
                 data={people}
