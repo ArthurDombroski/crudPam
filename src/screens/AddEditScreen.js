@@ -4,7 +4,7 @@ import { View, Text, FlatList, Button } from "react-native";
 import styles from "../styles/styles.js";
 
 import peopleCrud from "../servers/peopleCrud.js";
-import { TextInput } from "react-native-gesture-handler";
+import { TextInput } from "react-native";
 
 export default function AddEditScreen({ route, navigation }) {
 
@@ -23,9 +23,10 @@ export default function AddEditScreen({ route, navigation }) {
         } else {
             await peopleCrud.postPerson(data);
         }
+
+        navigation.goBack();
     }
 
-    navigation.goBack();
 
     return (
         <View style={styles.container}>

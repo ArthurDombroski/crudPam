@@ -22,7 +22,7 @@ async function postPerson(person){
 }
 
 async function putPerson(id, person){
-    const response = await fetch(`${API_URL}/people/{id}`, {
+    const response = await fetch(`${API_URL}/people/${id}`, {
         method: "PUT",
         headers:{
             "Content-Type": "application/json"

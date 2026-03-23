@@ -16,7 +16,7 @@ export default StyleSheet.create({
     card:{
         flexDirection:"row",
         justifyContent:"space-between",
-        backgroundColor:"fff",
+        backgroundColor:"#fff",
         padding:10,
         marginBottom:10,
         borderRadius:5

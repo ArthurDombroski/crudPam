@@ -22,7 +22,7 @@ function CardPersonal({ item, navigation, refresh }) {
             <View>
 
                 <Button title="Editar"
-                    onPress={() => navigation.navigate("AddEdit", { person: item })}
+                    onPress={() => navigation.navigate("AddEditScreen", { person: item })}
                 />
 
                 <Button title="Deletar"
