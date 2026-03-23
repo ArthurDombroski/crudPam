@@ -1,4 +1,4 @@
-const API_URL = "https://thirty-toes-exist.loca.lt";
+const API_URL = "https://major-lit-grip-ties.trycloudflare.com";
 
 
 export default API_URL;

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, Button } from "react-native";
+import { useFocusEffect } from "@react-navigation/native";
+import { useCallback } from "react";
 
 import styles from "../styles/styles.js";
 
@@ -15,9 +17,11 @@ export default function HomeScreen({ navigation }) {
         setPeople(data);
     }
 
-    useEffect(() => {
-        loadPeople();
-    }, []);
+    useFocusEffect(
+        useCallback(() => {
+            loadPeople();
+        }, [])
+    );
 
     return (
         <View style={styles.container}>

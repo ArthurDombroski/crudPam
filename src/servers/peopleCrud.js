@@ -1,4 +1,4 @@
-import {API_URL} from "./configApi.js"
+import API_URL from "./configApi.js"
 
 async function getPeople(){
 
