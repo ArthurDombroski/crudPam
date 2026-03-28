@@ -7,15 +7,29 @@ import styles from "../styles/styles.js";
 
 import peopleCrud from "../servers/peopleCrud.js";
 import CardPersonal from "../components/CardPersonal.js";
+import SearchBar from "../components/SearchBar.js";
 
 export default function HomeScreen({ navigation }) {
     const [people, setPeople] = useState([]);
+    const [search, setSearch] = useState("");
 
     async function loadPeople() {
         const data = await peopleCrud.getPeople();
 
         setPeople(data);
     }
+
+    // function searchPeople() {
+    //     const filtered = people.filter(person => {
+    //     const fullName = `${person.firstName} ${person.lastName}`.toLowerCase();
+    //     return fullName.includes(search.toLowerCase());
+    // });
+
+    const filtered = people.filter(person => {
+        const fullName = `${person.firstName} ${person.lastName}`.toLowerCase();
+        return fullName.includes(search.toLowerCase());
+    });
+    
 
     useFocusEffect(
         useCallback(() => {
@@ -26,13 +40,17 @@ export default function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
 
+            
+
             <Text style={styles.title}>Pessoas</Text>
+
+            <SearchBar value={search} onChangeText={setSearch} />
 
             <Button title="Adicionar Pessoa"
                 onPress={() => navigation.navigate("AddEditScreen")} />
 
             <FlatList
-                data={people}
+                data={filtered}
                 keyExtractor={(item) => item.id.toString()}
 
                 renderItem={({ item }) => (
