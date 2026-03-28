@@ -17,6 +17,10 @@ function CardPersonal({ item, navigation, refresh }) {
                 <Text style={styles.name}>
                     {item.email}
                 </Text>
+
+                <Text style={styles.name}>
+                    {item.phone}
+                </Text>
             </View>
 
             <View>

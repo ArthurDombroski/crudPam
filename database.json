@@ -4,13 +4,22 @@
       "firstName": "Rafael",
       "lastName": "Cruz",
       "email": "rafael@email.com.br",
+      "phone": "11999999999",
       "id": "1"
     },
     {
       "firstName": "Arthur",
       "lastName": "Bianchi",
       "email": "bianchi@gmail.com",
+      "phone": "11988888888",
       "id": "hp1JJC_IpiI"
+    },
+    {
+      "firstName": "Renata",
+      "lastName": "Barros",
+      "email": "renata@gmail.com",
+      "phone": "19971390902",
+      "id": "OgVfSjLAzCA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
